@@ -1,9 +1,10 @@
 .row {
     padding: 20px;
+    width: 100%;
 }
 
 div {
-    background-color: blanchedalmond;
+    background-color: antiquewhite;
     text-align: center;
 }
 
@@ -12,10 +13,11 @@ div {
     #fotoperfil {
         position: absolute;
         width: 15%;
+        /*margin: auto;*/
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
         left: 3%;
-        top: 600px;
+        top: 500px;
     }
 }
 
@@ -23,15 +25,16 @@ div {
     #fotoperfil {
         position: absolute;
         width: 30%;
+        margin: auto;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 33%;
-        top: 630px;
+        left: 36%;
+        top: 250px;
     } 
 } 
 /*nombre*/
-
-#nombre {
-    font-weight: bold;
-    margin-top: 5%;
+@media (max-width: 425px){
+    #nombre {
+        margin-top: 20%;
+    }
 }
