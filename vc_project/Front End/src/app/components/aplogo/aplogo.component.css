@@ -1,0 +1,68 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*(click)= "login"()*/
+
+#aplogo {
+    width: 170px;
+}
+
+.logo{
+    height: 90px;
+}
+
+.redes {
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+/* configuracion redes */ 
+img {
+    margin-top: 2px;
+    margin-right: 5px;
+    width: 40px;
+}
+
+div {
+    margin-right: 5px;
+}
+
+.btn-outline-light {
+    border-style:solid;
+    border-width: 2px;
+    background-color:rgb(240, 185, 214);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Transicion de color*/ 
+.btn-outline-light:hover {
+    box-shadow: inset 100px 0 0 0 #FF73F2;
+}
+
+/* Para vistas chicas */
+@media (max-width: 575px){
+    .container {
+     flex-direction: column;
+    }
+
+    .redes {
+        margin: auto;
+        margin-top: -10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes img {
+        margin: 2px;
+    }
+
+    .ingreso {
+        padding-top: 5px;
+        display: flex;
+        margin-bottom: 5px;
+    }
+}

@@ -2,12 +2,6 @@ div {
     background-color: rgb(254, 186, 214);
 }
 
-app-redes {
-    float: right;
-    margin-top: 25px;
-}
-
 app-banner {
-    margin-top: 50px;
-
+    margin-top: 15px;
 }

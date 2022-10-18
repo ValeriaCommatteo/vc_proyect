@@ -1,6 +1,5 @@
 .row {
     padding: 20px;
-    width: 100%;
 }
 
 div {
@@ -8,16 +7,25 @@ div {
     text-align: center;
 }
 
-/*foto de perfil*/
+#fotoperfil {
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+}
+
+@media (max-width: 575px) {
+    #fotoperfil {
+        width: 35%;
+    }
+}
+/*foto de perfil
 @media (min-width: 576px){
     #fotoperfil {
         position: absolute;
         width: 15%;
-        /*margin: auto;*/
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
         left: 3%;
-        top: 500px;
+        top: 740px;
     }
 }
 
@@ -31,10 +39,12 @@ div {
         left: 36%;
         top: 250px;
     } 
-} 
+}*/
+
 /*nombre*/
-@media (max-width: 425px){
+@media (min-width: 320px) and (max-width: 425px){
     #nombre {
-        margin-top: 20%;
+        margin-top: 5px;
     }
+
 }

@@ -1,3 +1,51 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #aplogo {
     width: 170px;
+}
+
+.logo{
+    height: 90px;
+}
+
+/* configuracion redes */ 
+img {
+    margin-top: 2px;
+    margin-right: 5px;
+    width: 40px;
+}
+
+div {
+    margin-right: 5px;
+}
+
+.btn-outline-light {
+    border-width: medium;
+}
+
+/* Para vistas chicas */
+@media (max-width: 575px){
+    .container {
+     flex-direction: column;
+    }
+
+    .redes {
+        margin-top: -10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes img {
+        margin: 2px;
+    }
+
+    .ingreso {
+        padding-top: 5px;
+        display: flex;
+        margin-bottom: 5px;
+    }
 }
