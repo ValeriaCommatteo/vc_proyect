@@ -1,5 +1,7 @@
 div {
-    background-color:rgb(244, 212, 253);
+    background-image: url(../../../assets/6016334.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 app-banner {

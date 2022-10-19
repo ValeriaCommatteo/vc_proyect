@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url(../../../assets/6016334.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*(click)= "login"()*/
@@ -15,8 +18,9 @@
 }
 
 .redes {
-    margin-left: auto; 
-    margin-right: 0;
+    margin-right: auto; 
+    margin-left: 0;
+    height: 30px;
 }
 
 /* configuracion redes */ 
@@ -32,15 +36,15 @@ div {
 
 .btn-outline-light {
     border-style:solid;
+    border-color: rgb(20, 19, 20);
     border-width: 2px;
-    background-color:rgb(240, 185, 214);
     font-family: 'Montserrat', sans-serif;
-
+    background-color: rgb(255, 145, 200);
 }
 
 /* Transicion de color*/ 
 .btn-outline-light:hover {
-    box-shadow: inset 100px 0 0 0 #FF73F2;
+    box-shadow: inset 100px 0 0 0 #f73395;
 }
 
 /* Para vistas chicas */
@@ -61,7 +65,7 @@ div {
     }
 
     .ingreso {
-        padding-top: 5px;
+        padding-top: 15px;
         display: flex;
         margin-bottom: 5px;
     }

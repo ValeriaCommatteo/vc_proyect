@@ -1,10 +1,9 @@
 .row {
-    padding: 25px;
+    padding: 15px;
     font-family: 'Roboto', sans-serif;
-}
-
-div {
-    background-color:antiquewhite;
+    background-image: url(../../../assets/6016334.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h3, h5 {

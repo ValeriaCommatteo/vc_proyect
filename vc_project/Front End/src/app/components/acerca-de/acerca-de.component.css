@@ -1,9 +1,14 @@
 .row {
     padding: 20px;
+    background-image: url(../../../assets/6016334.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div {
-    background-color: antiquewhite;
+    background-image: url(../../../assets/6016334.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     text-align: center;
 }
 
