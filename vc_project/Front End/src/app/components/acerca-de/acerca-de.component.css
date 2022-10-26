@@ -23,20 +23,20 @@ div {
     }
 }
 
-#nombre {
+/*#nombre {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: large;
-}
+}*/
 
 #acerca {
     font-family: 'Roboto', sans-serif;
 }
 
 
-/*nombre*/
+/*nombre
 @media (min-width: 320px) and (max-width: 425px){
     #nombre {
         margin-top: 7px;
     }
 
-}
+}*/

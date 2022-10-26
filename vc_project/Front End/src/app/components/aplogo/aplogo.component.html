@@ -10,7 +10,8 @@
             <a href=""><img src="../../../assets/linkedin.png" alt="linkeid"></a> 
         </div>
         <div class="ingreso">
-            <button type="button" class="btn btn-outline-light" (click)="login()">Ingreso</button>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf= "!isLogged">Ingreso</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf= "isLogged">CERRAR SESION</button>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
