@@ -10,7 +10,7 @@ export class SExperienciaService {
   static detail(id: any) {
     throw new Error('Method not implemented.');
   }
-  expURL = "http://localhost:8080/explab/"
+  expURL = "https://bendprueba.herokuapp.com/explab/"
 
   constructor(private httpClient: HttpClient) {} 
 

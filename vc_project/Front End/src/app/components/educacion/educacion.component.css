@@ -9,3 +9,11 @@
 h3, h5 {
     display: inline;
 }
+
+.btn-outline-light {
+    border-style:solid;
+    border-color: rgb(20, 19, 20);
+    border-width: 2px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 145, 200);
+}
