@@ -6,7 +6,7 @@ package com.portfolio.mgb.Controller;
 
 import com.portfolio.mgb.Entity.Experiencia;
 import com.portfolio.mgb.Security.Controller.Mensaje;
-import com.portfolio.mgb.Security.Dto.dtoExperiencia;
+import com.portfolio.mgb.Dto.dtoExperiencia;
 import com.portfolio.mgb.Service.SExperiencia;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("explab")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://fendprueba.web.app/")
 public class CExperiencia {
 
     @Autowired

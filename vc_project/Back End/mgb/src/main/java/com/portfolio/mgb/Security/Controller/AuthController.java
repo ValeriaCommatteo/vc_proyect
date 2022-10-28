@@ -4,9 +4,9 @@
  */
 package com.portfolio.mgb.Security.Controller;
 
-import com.portfolio.mgb.Security.Dto.JwtDto;
-import com.portfolio.mgb.Security.Dto.LoginUsuario;
-import com.portfolio.mgb.Security.Dto.NuevoUsuario;
+import com.portfolio.mgb.Dto.JwtDto;
+import com.portfolio.mgb.Dto.LoginUsuario;
+import com.portfolio.mgb.Dto.NuevoUsuario;
 import com.portfolio.mgb.Security.Entity.Rol;
 import com.portfolio.mgb.Security.Entity.Usuario;
 import com.portfolio.mgb.Security.Enums.RolNombre;

@@ -2,11 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.portfolio.mgb.Security.Dto;
+package com.portfolio.mgb.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-public class dtoEducacion {
+
+public class dtoExperiencia {
     @NotBlank
     private String nombreE;
     @NotBlank
@@ -14,10 +15,10 @@ public class dtoEducacion {
     
     //Constructor
 
-    public dtoEducacion() {
+    public dtoExperiencia() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE) {
+    public dtoExperiencia(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
@@ -39,7 +40,5 @@ public class dtoEducacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
-    
-    
+     
 }
