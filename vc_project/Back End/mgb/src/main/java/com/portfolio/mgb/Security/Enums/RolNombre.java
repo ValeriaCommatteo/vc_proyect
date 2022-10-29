@@ -4,11 +4,7 @@
  */
 package com.portfolio.mgb.Security.Enums;
 
-/**
- *
- * @author Rodri
- */
+
 public enum RolNombre {
-    ROLE_ADMIN, ROLE_USER 
-    
+    ROLE_ADMIN, ROLE_USER    
 }

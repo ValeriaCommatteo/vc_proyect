@@ -25,7 +25,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = "https://fendprueba.web.app/")
+//@CrossOrigin(origins = "https://localhost:4200")
+@CrossOrigin(origins = "https://fendprueba.web.app")
 public class CEducacion {
 
     @Autowired
@@ -53,7 +54,7 @@ public class CEducacion {
     @PutMapping("/update/{id}")    
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoEducacion dtoeducacion){
         //Validamos si existe el ID
-        if(!sEducacion.existisById(id))
+        if(!sEducacion.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencia
         if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNombreE(dtoeducacion.getNombreE()).get().getId() !=id)
@@ -72,7 +73,7 @@ public class CEducacion {
     
     @GetMapping("/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable("id") int id){
-        if(!sEducacion.existisById(id))
+        if(!sEducacion.existsById(id))
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         Educacion educacion = sEducacion.getOne(id).get();
         return new ResponseEntity(educacion, HttpStatus.OK);
@@ -81,7 +82,7 @@ public class CEducacion {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         //Validamos si existe el ID
-        if(!sEducacion.existisById(id))
+        if(!sEducacion.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         
         sEducacion.delete(id);

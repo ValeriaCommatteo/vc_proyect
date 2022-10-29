@@ -38,7 +38,7 @@ public class SExperiencia {
         rExperiencia.deleteById(id);
     }
     
-    public boolean existisById (int id){
+    public boolean existsById (int id){
         return rExperiencia.existsById(id);
     }
     

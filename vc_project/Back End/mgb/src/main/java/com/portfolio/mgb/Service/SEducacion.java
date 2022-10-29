@@ -38,7 +38,7 @@ public class SEducacion {
         rEducacion.deleteById(id);
     }
     
-    public boolean existisById (int id){
+    public boolean existsById (int id){
         return rEducacion.existsById(id);
     }
     

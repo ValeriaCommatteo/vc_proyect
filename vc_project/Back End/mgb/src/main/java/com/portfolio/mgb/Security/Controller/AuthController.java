@@ -10,6 +10,7 @@ import com.portfolio.mgb.Dto.NuevoUsuario;
 import com.portfolio.mgb.Security.Entity.Rol;
 import com.portfolio.mgb.Security.Entity.Usuario;
 import com.portfolio.mgb.Security.Enums.RolNombre;
+import static com.portfolio.mgb.Security.Enums.RolNombre.ROLE_ADMIN;
 import com.portfolio.mgb.Security.Service.RolService;
 import com.portfolio.mgb.Security.Service.UsuarioService;
 import com.portfolio.mgb.Security.jwt.JwtProvider;
@@ -34,7 +35,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://fendprueba.web.app")
 public class AuthController {
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -66,7 +68,7 @@ public class AuthController {
         Set<Rol> roles = new HashSet<>();
         roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
 
-        if (nuevoUsuario.getRoles().contains("admin")) {
+        if (nuevoUsuario.getRoles().contains(ROLE_ADMIN)) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
         }
         usuario.setRoles(roles);
