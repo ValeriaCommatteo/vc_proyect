@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '172076762483',
   },
   production: true,
-  URL: 'http://bendprueba.herokuapp.com/',
+  URL: 'https://backendproyectvc.herokuapp.com/',
 };
