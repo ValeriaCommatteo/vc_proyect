@@ -76,20 +76,16 @@ public class CHys {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoHys dtohys) {
         //Validamos si existe el ID
-        if (!shys.existsById(id)) {
+        if (!shys.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        }
         //Compara nombre de experiencia
-        if (shys.existsByNombre(dtohys.getNombre()) && shys.getByNombre(dtohys.getNombre()).get().getId() != id) {
+        if (shys.existsByNombre(dtohys.getNombre()) && shys.getByNombre(dtohys.getNombre()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
-        }
         //No puede estar vacio
-        if (StringUtils.isBlank(dtohys.getNombre())) {
+        if (StringUtils.isBlank(dtohys.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if (dtohys.getPorcentaje() != 0) {
+        if (StringUtils.isBlank(Integer.toString(dtohys.getPorcentaje())))
             return new ResponseEntity(new Mensaje("El porcentaje es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
 
         hys hYs = shys.getOne(id).get();
         hYs.setNombre(dtohys.getNombre());

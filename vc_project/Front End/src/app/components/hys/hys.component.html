@@ -12,6 +12,8 @@
             [percent]="(skill.porcentaje)" 
             [radius]="75" 
             [title]="(skill.nombre)" 
+            [showUnits]="false"
+            [showSubtitle]="false"
             [titleColor]="'#000000'"
             [titleFontSize]="'20px'" 
             [outerStrokeWidth]="6" 
@@ -19,12 +21,14 @@
             [outerStrokeColor]="'#FFAEE1'"
             [innerStrokeColor]="'#FF00A0'" 
             [animation]="true" 
-            [animationDuration]="500">
+            [animationDuration]="500"
+            [startFromZero]="true"
+            [lazy]="true">
         </circle-progress>
         <div>
             <td *ngIf="isLogged">
                 <button class="btn btn-outline-light" routerLink="/editskill/{{skill.id}}">
-                    <i class="bi bi-pen"></i></button>
+                    <i class="bi bi-pen"></i></button> &nbsp;
             </td>
             <td *ngIf="isLogged">
                 <button class="btn btn-outline-light" (click)="delete(skill.id)">

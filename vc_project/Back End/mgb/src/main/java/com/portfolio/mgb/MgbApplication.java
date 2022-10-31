@@ -19,12 +19,12 @@ public class MgbApplication {
                 @Override
                 public void addCorsMappings(CorsRegistry registry) {
                     registry.addMapping("/**")
-//                            .allowedOrigins("*")
-//                            .allowedMethods("*")
-//                            .allowedHeaders("*");
-                            .allowedOrigins("http://localhost:4200")
-                            .allowedMethods("http://localhost:4200")
-                            .allowedHeaders("http://localhost:4200");
+                            .allowedOrigins("*")
+                            .allowedMethods("*")
+                            .allowedHeaders("*");
+//                            .allowedOrigins("http://localhost:4200")
+//                            .allowedMethods("http://localhost:4200")
+//                            .allowedHeaders("http://localhost:4200");
 //                            .allowedOrigins("https://fendprueba.web.app")
 //                            .allowedMethods("https://fendprueba.web.app")
 //                            .allowedHeaders("https://fendprueba.web.app");

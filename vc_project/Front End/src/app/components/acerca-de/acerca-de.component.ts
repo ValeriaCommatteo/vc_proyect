@@ -20,9 +20,9 @@ export class AcercaDeComponent implements OnInit {
     this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
-  }else{
-    this.isLogged = false;
-  }
+    }else{
+      this.isLogged = false;
+    }
 }  
 
   cargarPersona(): void{

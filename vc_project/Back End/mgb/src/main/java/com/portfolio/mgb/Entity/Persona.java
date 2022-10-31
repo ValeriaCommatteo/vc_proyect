@@ -27,6 +27,7 @@ public class Persona {
     
     private String descripcion;
     
+    @Size (min = 1, max = 255)
     private String img;
     
     //Constructor

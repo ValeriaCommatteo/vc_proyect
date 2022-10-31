@@ -39,9 +39,9 @@ public class PersonaController {
         //Validamos si existe el ID
         if(!personaService.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
-        //Compara nombre de experiencia
+        //Compara nombre
         if(personaService.existsByNombre(dtopersona.getNombre()) && personaService.getByNombre(dtopersona.getNombre()).get().getId() !=id)
-            return new ResponseEntity(new Mensaje("Esa nombre ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtopersona.getNombre()))
             return new ResponseEntity(new Mensaje("Este campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
@@ -49,9 +49,9 @@ public class PersonaController {
         Persona persona = personaService.getOne(id).get();
         
         persona.setNombre(dtopersona.getNombre());
-        persona.setDescripcion(dtopersona.getApellido());
-        persona.setNombre(dtopersona.getDescripcion());
-        persona.setDescripcion(dtopersona.getImg());
+        persona.setApellido(dtopersona.getApellido());
+        persona.setDescripcion(dtopersona.getDescripcion());
+        persona.setImg(dtopersona.getImg());
         
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);

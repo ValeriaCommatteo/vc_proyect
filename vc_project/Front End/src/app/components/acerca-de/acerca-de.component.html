@@ -1,25 +1,22 @@
-<div class="row">
+<div>
+    <br>
     <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
-        Editar Persona
+        EDITAR PERSONA
     </button>
 </div>
-<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-    <img src="{{persona.img}}" class="img-fluid" id="fotoperfil">
-</div>
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <p id="nombre" *ngIf="isLogged">{{ persona.apellido}} {{ persona.nombre }}<b></b></p>
-    <p><b>* Full Stack Developer Jr</b></p>
-    <p><b>* Tester Qa</b></p>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
-</div>
-<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="acerca">
-    <span>
-        <h1><b>Acerca de mi</b></h1>
-        <p>{{persona.descripcion}}</p>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-    </span>
+<div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <img src={{persona.img}} class="img-fluid" id="fotoperfil">
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <p id="nombre" *ngIf="isLogged"><b><h5>{{persona.nombre}} {{persona.apellido}}</h5></b></p>
+        <p>* Full Stack Developer Jr</p>
+        <p>* Tester Qa</p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="acerca">
+        <span>
+            <h1><b>Acerca de mí</b></h1>
+            <p>{{persona.descripcion}}</p>
+        </span>
+    </div>
 </div>
