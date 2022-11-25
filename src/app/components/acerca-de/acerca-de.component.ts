@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  persona: persona = null;
+  persona: persona = new persona('','','','')
   
   constructor(
     public personaService: PersonaService,
@@ -23,7 +23,7 @@ export class AcercaDeComponent implements OnInit {
     }else{
       this.isLogged = false;
     }
-}  
+}
 
   cargarPersona(): void{
     this.personaService.detail(1).subscribe(data => 

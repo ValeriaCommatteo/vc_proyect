@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
+import { ImagenService } from 'src/app/service/imagen.service';
 import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class NewSkillComponent implements OnInit {
   porcentaje: number = 0;
 
   constructor(
-    private skillS: SkillService, 
+    private skillS: SkillService,
+    public imagenService: ImagenService, 
     private router: Router) { }
 
   ngOnInit(): void {
@@ -32,4 +34,10 @@ export class NewSkillComponent implements OnInit {
     )
   }
 
+  cancel(): void {
+
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
+  }
 }

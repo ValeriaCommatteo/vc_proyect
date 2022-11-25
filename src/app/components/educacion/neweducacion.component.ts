@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { ImagenService } from 'src/app/service/imagen.service';
 
 @Component({
   selector: 'app-neweducacion',
@@ -12,7 +13,10 @@ export class NeweducacionComponent implements OnInit {
   nombreE: string= "";
   descripcionE: string ="";
 
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(
+    private educacionS: EducacionService,
+    public imagenService: ImagenService,  
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,4 +34,10 @@ export class NeweducacionComponent implements OnInit {
     )
   }
 
+  cancel(): void {
+
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
+  }
 }

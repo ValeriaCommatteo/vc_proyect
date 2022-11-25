@@ -4,11 +4,8 @@
         <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Habilidad</button>
     </div>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <div class="col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
-        <circle-progress 
+        <circle-progress *ngIf="isLogged"
             [percent]="(skill.porcentaje)" 
             [radius]="75" 
             [title]="(skill.nombre)" 
@@ -35,5 +32,62 @@
                     <i class="bi bi-trash2-fill"></i></button>
             </td>
         </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo">
+        <circle-progress *ngIf="!isLogged"
+            [percent]="50" 
+            [radius]="75" 
+            [title]="'Habilidad 1'" 
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [titleColor]="'#000000'"
+            [titleFontSize]="'20px'" 
+            [outerStrokeWidth]="6" 
+            [innerStrokeWidth]="1" 
+            [outerStrokeColor]="'#FFAEE1'"
+            [innerStrokeColor]="'#FF00A0'" 
+            [animation]="true" 
+            [animationDuration]="500"
+            [startFromZero]="true"
+            [lazy]="true">
+        </circle-progress>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo">
+        <circle-progress *ngIf="!isLogged"
+            [percent]="25" 
+            [radius]="75" 
+            [title]="'Habilidad 2'" 
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [titleColor]="'#000000'"
+            [titleFontSize]="'20px'" 
+            [outerStrokeWidth]="6" 
+            [innerStrokeWidth]="1" 
+            [outerStrokeColor]="'#FFAEE1'"
+            [innerStrokeColor]="'#FF00A0'" 
+            [animation]="true" 
+            [animationDuration]="500"
+            [startFromZero]="true"
+            [lazy]="true">
+        </circle-progress>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo">
+        <circle-progress *ngIf="!isLogged"
+            [percent]="75" 
+            [radius]="75" 
+            [title]="'Habilidad 3'" 
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [titleColor]="'#000000'"
+            [titleFontSize]="'20px'" 
+            [outerStrokeWidth]="6" 
+            [innerStrokeWidth]="1" 
+            [outerStrokeColor]="'#FFAEE1'"
+            [innerStrokeColor]="'#FF00A0'" 
+            [animation]="true" 
+            [animationDuration]="500"
+            [startFromZero]="true"
+            [lazy]="true">
+        </circle-progress>
     </div>
 </div>

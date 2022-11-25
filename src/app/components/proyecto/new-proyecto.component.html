@@ -1,0 +1,38 @@
+<section class="vh-100 gradient-custom">
+    <div class="container">
+        <div class="row">
+            <div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <br>
+                    <div class="form-group">
+                        <label for="nombreP">Título del proyecto</label>
+                        <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionP">Descripción del proyecto</label>
+                        <input type="text" class="form-control" name="descripcionP" id="descripcionP"
+                            [(ngModel)]="descripcionP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link del proyecto</label>
+                        <input type="text" class="form-control" name="link" id="link"
+                            [(ngModel)]="link" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgP">Imagen del proyecto</label>
+                        <input type="file" class="form-control" name="imgP" id="imgP" [(ngModel)]="imgP"
+                            (change)="uploadImagen($event)" accept=".jpg, .jpeg, .png">
+                    </div>
+                    <br>
+                    <button class="btn btn-dark">
+                        AGREGAR
+                    </button>
+                    <button class="btn btn-dark" (click)="cancel()" id="cancel">
+                        CANCEL
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

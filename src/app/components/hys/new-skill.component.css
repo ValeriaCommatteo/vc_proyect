@@ -1,10 +1,23 @@
 .gradient-custom {
     /* fallback for old browsers */
-    background: rgb(243, 182, 243);
+    background: rgb(224, 55, 148);
     
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgb(243, 182, 243), rgb(176, 98, 248));
+    background: -webkit-linear-gradient(to right, rgb(224, 55, 148),  rgb(127, 38, 228));
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgb(243, 182, 243), rgb(176, 98, 248));
+    background: linear-gradient(to right, rgb(224, 55, 148), rgb(127, 38, 228));
+}
+
+.row {
+    font-family: cursive;
+}
+#cancel {
+    align-items: center;
+    margin-left: 1%;
+}
+
+#edit {
+    display: inline;
+    margin-left: 85%;
 }

@@ -15,8 +15,11 @@
                             [(ngModel)]="descripcionE" required>
                     </div>
                     <br>
-                    <button class="btn btn-dark">
+                    <button class="btn btn-dark" id="edit">
                         AGREGAR
+                    </button>
+                    <button class="btn btn-dark" (click)="cancel()" id="cancel">
+                        CANCEL
                     </button>
                 </form>
             </div>

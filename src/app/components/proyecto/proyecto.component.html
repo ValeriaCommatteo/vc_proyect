@@ -1,15 +1,50 @@
-<div class="row">
-    <h1><u><i><b>Proyectos</b></i></u></h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-             <h2>Titulo</h2>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis quae, eligendi nemo illo quos rem, tenetur architecto perferendis accusamus provident aliquam cum fugiat sint molestias quia iure, aperiam quaerat.</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 pffset-lg-1 parte2">
-             <img src="" class="img-fluid img-proyecto">
-        </div>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<div class="row"> 
+     <h1><u><i><b>Proyectos</b></i></u></h1>
+     <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/newproyecto" *ngIf="isLogged">
+            Agregar Proyecto
+        </button>
     </div>
-</div>
+    
+    <div class="col-lg-1"></div> 
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody *ngIf="isLogged">
+                <tr *ngFor="let Proyecto of proye">
+                    <td><h4>{{Proyecto.nombreP}}</h4></td>
+                    <td><p><i>{{Proyecto.descripcionP}}</i></p></td>
+                    <td><p><i>{{Proyecto.link}}</i></p></td>
+                    <td><img *ngIf="isLogged" src={{Proyecto.imgP}} class="img-fluid" id="img-proyecto"></td>
+                    <td>
+                        <button class="btn btn-outline-light" routerLink="/editproyecto/{{Proyecto.id}}">
+                        <i class="bi bi-pen"></i>EDITAR</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-light" (click)="delete(Proyecto.id)">
+                        <i class="bi bi-trash2-fill"></i>BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="!isLogged">
+                <tr>
+                    <td><h4>Proyecto 1</h4></td>
+                    <td><p><i>Descripción 1</i></p></td>
+                    <td><p><i>Link 1</i></p></td>
+                    <td> <img src="../../../assets/Trabajar-Proyecto-Programacion.jpg" class="img-fluid" id="fotoproyectodefault1"></td>
+                </tr>
+                <tr>
+                    <td><h4>Proyecto 2</h4></td>
+                    <td><p><i>Descripción 2</i></p></td>
+                    <td><p><i>Link 2</i></p></td>
+                    <td> <img src="../../../assets/Trabajar-Proyecto-Programacion.jpg" class="img-fluid" id="fotoproyectodefault2"></td>
+                </tr>
+                <tr>
+                    <td><h4>Proyecto 3</h4></td>
+                    <td><p><i>Descripción 3</i></p></td>
+                    <td><p><i>Link 3</i></p></td>
+                    <td> <img src="../../../assets/Trabajar-Proyecto-Programacion.jpg" class="img-fluid" id="fotoproyectodefault3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 

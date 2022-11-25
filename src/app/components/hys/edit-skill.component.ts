@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
+import { ImagenService } from 'src/app/service/imagen.service';
 import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class EditSkillComponent implements OnInit {
   constructor(
     private skillS: SkillService, 
     private activatedRouter: ActivatedRoute, 
+    public imagenService: ImagenService,
     private router: Router) { }
 
     ngOnInit(): void {
@@ -38,5 +40,11 @@ export class EditSkillComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+  }
+
+  cancel(): void {
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
   }
 }

@@ -1,27 +1,5 @@
 # VcProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+Buenas! Les paso a comentar un poco mi trabajo de portfolio realizado para el proyecto final del programa.
+Lo hice lo más personalizado posible, como decía en el "Esquema básico sobro el TPF integrador" lo realice de la mejor manera de que demuestre mi identidad, salvo por un detalle, los iconos de las redes sociales en vez de ponerlos a la derecha, las puse a la izquierda por el tema del constraste del color con el fondo, si bien no fue el primero que seleccione, al pricipio fui manejando solo colores solidos en el CSS pero nada me terminaba de cerrar, hasta que investigando encontre como poner imagenes de fondo y darles estilo y de todas las que puse fue la que más me gusto por eso hice esa correción.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

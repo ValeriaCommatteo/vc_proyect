@@ -8,9 +8,9 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  static detail(id: any) {
-    throw new Error('Method not implemented.');
-  }
+  // static detail(id: any) {
+  //   throw new Error('Method not implemented.');
+  // }
   URL = environment.URL +'explab/';
 
   constructor(private httpClient: HttpClient) {} 

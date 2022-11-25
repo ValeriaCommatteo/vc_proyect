@@ -6,17 +6,20 @@
 </div>
 <div class="row">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <img src={{persona.img}} class="img-fluid" id="fotoperfil">
+        <img *ngIf="isLogged" src={{persona.img}} class="img-fluid" id="fotoperfil">
+        <img *ngIf="!isLogged" src="../../../assets/fotoperfil.png" class="img-fluid" id="fotoperfildefault">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre" *ngIf="isLogged"><b><h5>{{persona.nombre}} {{persona.apellido}}</h5></b></p>
+        <p *ngIf="isLogged" id="nombre" ><b><h5>{{ persona.nombre }} {{ persona.apellido }}</h5></b></p>
+        <p *ngIf="!isLogged" ><b><h5>Nombre y Apellido</h5></b></p>
         <p>* Full Stack Developer Jr</p>
-        <p>* Tester Qa</p>
+        <p>* Tester Qa Jr</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" id="acerca">
         <span>
             <h1><b>Acerca de mí</b></h1>
-            <p>{{persona.descripcion}}</p>
+            <p *ngIf="isLogged">{{persona.descripcion}}</p>
+            <p *ngIf="!isLogged">Aca va a ir tu descripción</p>
         </span>
     </div>
 </div>

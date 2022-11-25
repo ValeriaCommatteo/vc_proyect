@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { persona } from 'src/app/model/persona.model';
+import { Proyecto } from 'src/app/model/proyecto';
 import { ImagenService } from 'src/app/service/imagen.service';
-import { PersonaService } from 'src/app/service/persona.service';
+import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
-  selector: 'app-edit-acercade',
-  templateUrl: './edit-acercade.component.html',
-  styleUrls: ['./edit-acercade.component.css']
+  selector: 'app-edit-proyecto',
+  templateUrl: './edit-proyecto.component.html',
+  styleUrls: ['./edit-proyecto.component.css']
 })
-export class EditAcercadeComponent implements OnInit {
-  persona: persona = null;
+export class EditProyectoComponent implements OnInit {
+  proyecto: Proyecto = null;
 
   constructor(
-    private personaService: PersonaService, 
+    private proyectoS: ProyectoService, 
     private activatedRouter: ActivatedRoute, 
     private router: Router,
     public imagenService: ImagenService) { }
 
     ngOnInit(): void {
       const id = this.activatedRouter.snapshot.params['id'];
-      this.personaService.detail(id).subscribe(
+      this.proyectoS.detail(id).subscribe(
         data => {
-          this.persona = data;
-        }, err =>{
+          this.proyecto = data;
+          }, err =>{
           alert("Error al modificar");
           this.router.navigate(['']);
         }
@@ -32,12 +32,13 @@ export class EditAcercadeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imagenService.urlImg;
-    this.personaService.update(id, this.persona).subscribe(
+    this.proyecto.imgP = this.imagenService.urlImg;
+    this.proyectoS.update(id, this.proyecto).subscribe(
       data => {
+        alert("El proyecto se ha modificado correctamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar perfil");
+        alert("Error al modificar proyecto");
         this.router.navigate(['']);
       }
     )
@@ -45,7 +46,7 @@ export class EditAcercadeComponent implements OnInit {
 
   uploadImagen($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
-    const name = `perfil_`+ id;
+    const name = `proyecto_` + id;
     this.imagenService.uploadImagen($event, name)
   }
 

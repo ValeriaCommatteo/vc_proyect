@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
+import { ImagenService } from 'src/app/service/imagen.service';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class NewExperienciaComponent implements OnInit {
   descripcionE: string ="";
 
   constructor(
-    private sExperiencia: SExperienciaService, 
+    private sExperiencia: SExperienciaService,
+    public imagenService: ImagenService, 
     private router: Router) { }
 
   ngOnInit(): void {
@@ -32,4 +34,10 @@ export class NewExperienciaComponent implements OnInit {
     )
   }
 
+  cancel(): void {
+
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
+  }
 }

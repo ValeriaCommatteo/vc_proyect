@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { ImagenService } from 'src/app/service/imagen.service';
 
 @Component({
   selector: 'app-editeducacion',
@@ -11,7 +12,10 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class EditeducacionComponent implements OnInit {
   educacion : Educacion = null;
 
-  constructor(private educacionS: EducacionService, private activatedRouter: ActivatedRoute, 
+  constructor(
+    private educacionS: EducacionService, 
+    private activatedRouter: ActivatedRoute, 
+    public imagenService: ImagenService,
     private router: Router) { }
 
     ngOnInit(): void {
@@ -32,9 +36,16 @@ export class EditeducacionComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar");
+        alert("Error al modificar educación");
         this.router.navigate(['']);
       }
     )
+  }
+
+  cancel(): void {
+
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
   }
 }

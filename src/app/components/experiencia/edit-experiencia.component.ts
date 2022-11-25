@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
+import { ImagenService } from 'src/app/service/imagen.service';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class EditExperienciaComponent implements OnInit {
 
   constructor(
     private sExperiencia: SExperienciaService, 
-    private activatedRouter: ActivatedRoute, 
+    private activatedRouter: ActivatedRoute,
+    public imagenService: ImagenService, 
     private router: Router) { }
 
     ngOnInit(): void {
@@ -42,4 +44,10 @@ export class EditExperienciaComponent implements OnInit {
     )
   }
 
+  cancel(): void {
+
+    this.imagenService.clearUrl();
+    this.router.navigate(['']);
+
+  }
 }

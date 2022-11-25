@@ -4,6 +4,7 @@
     background-image: url(../../../assets/6016334.jpg);
     background-size: cover;
     background-attachment: fixed;
+    font-family: cursive;
 }
 
 .contenedor {
@@ -18,4 +19,27 @@
 /*imagen del proyecto*/
 .img-proyecto {
     box-shadow: 10px 10px 30px #000000;
+}
+
+#fotoproyectodefault1, #fotoproyectodefault2, #fotoproyectodefault3 {
+    border-radius: 70%;
+    box-shadow: 3px 3px 3px #000;
+    width: 10%;
+    height: 10%;
+    float: right;    
+}
+
+#img-proyecto {
+    box-shadow: 3px 3px 3px #000;
+    width: 25%;
+    height: 25%;
+    float: right;
+}
+
+.btn-outline-light {
+    border-style:solid;
+    border-color: rgb(20, 19, 20);
+    border-width: 2px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 145, 200);
 }

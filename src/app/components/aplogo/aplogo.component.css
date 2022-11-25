@@ -7,7 +7,6 @@
     background-attachment: fixed;
 }
 
-/*(click)= "login"()*/
 
 #aplogo {
     width: 170px;
@@ -44,7 +43,7 @@ div {
 
 /* Transicion de color*/ 
 .btn-outline-light:hover {
-    box-shadow: inset 100px 0 0 0 #f73395;
+    box-shadow: inset 165px 0 0 0 #f73395;
 }
 
 /* Para vistas chicas */
