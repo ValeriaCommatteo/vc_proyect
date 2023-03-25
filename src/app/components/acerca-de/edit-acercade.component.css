@@ -24,10 +24,29 @@
 
 @media (max-width: 575px) {
     #cancel {
-        margin-left: 35%;
+        margin-left: 5%;
+        align-items: center;
+        justify-content: center;
     }
 
-    #edit {
+     #edit { 
+         margin-left: 20%; 
+         align-items: center;
+        justify-content: center;
+     } 
+}
+
+@media (min-width: 576px) {
+    #cancel {
         margin-left: 1%;
+        align-items: flex-end;
+        justify-content:last baseline;
     }
+
+     #edit { 
+         margin-left: 20%; 
+         align-items: flex-end;
+        justify-content:last baseline;
+     } 
+
 }
