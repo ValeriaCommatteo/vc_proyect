@@ -1,11 +1,9 @@
-.row {
+footer {
+    margin: auto;
     background-image: url(../../../assets/6016334.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: cursive;
-}
-
-footer {
     color: #727272;
     font-size: 16px;
     display: flex;
