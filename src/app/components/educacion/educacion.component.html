@@ -5,9 +5,7 @@
             Agregar Educación
         </button>
     </div>
-
-    <div class="col-lg-1"></div> 
-    <div class="col-lg-11">
+    <div class="container text-center">
         <table class="table">
             <tbody *ngIf="isLogged">
                 <tr *ngFor="let Educacion of educacion" >
@@ -26,15 +24,15 @@
             <tbody *ngIf="!isLogged">
                 <tr>
                     <td><h4>Educación 1</h4></td>
-                    <td><p><i>Título 1</i></p></td>
+                    <td><p>Título 1</p></td>
                 </tr>
                 <tr>
                     <td><h4>Educación 2</h4></td>
-                    <td><p><i>Título 2</i></p></td>
+                    <td><p>Título 2</p></td>
                 </tr>
                 <tr>
                     <td><h4>Educación 3</h4></td>
-                    <td><p><i>Título 3</i></p></td>                
+                    <td><p>Título 3</p></td>                
                 </tr>
             </tbody>
         </table>

@@ -20,6 +20,8 @@ h4 {
     background-color: rgb(255, 145, 200);
 }
 
-td {
+table td {
+    padding-top: 15px;
+    padding-right: 450px;
     border: none;
 }

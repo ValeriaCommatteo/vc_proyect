@@ -22,11 +22,11 @@
     box-shadow: 10px 10px 30px #000000;
 }
 
-#fotoproyectodefault1, #fotoproyectodefault2, #fotoproyectodefault3 {
-    border-radius: 70%;
+#fotodefault {
+    border-radius: 10%;
     box-shadow: 3px 3px 3px #000;
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 20%;
     float: right;    
 }
 
@@ -45,6 +45,8 @@
     background-color: rgb(255, 145, 200);
 }
 
-td {
+table td {
+    padding-top: 15px;
+    padding-left: 100px;
     border: none;
 }
