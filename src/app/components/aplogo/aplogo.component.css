@@ -4,7 +4,8 @@
     position: fixed; 
     width: 100%;
     height: 60px;
-    background-image: url(../../../assets/6016334.jpg);
+    /* background-image: url(../../../assets/6016334.jpg); */
+    background-color: rgba(0, 0, 0, 0.702);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -27,15 +28,15 @@
 
 .btn-outline-light {
     border-style:solid;
-    border-color: rgb(20, 19, 20);
+    border-color: rgb(7, 7, 7);
     border-width: 2px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(255, 145, 200);
+    /* font-family: 'Montserrat', sans-serif; */
+    background-color: rgb(251, 0, 125);
 }
 
 /* Transicion de color*/ 
 .btn-outline-light:hover {
-    box-shadow: inset 165px 0 0 0 #f73395;
+    box-shadow: inset 165px 0 0 0 #f695c6;
 }
 
 /* Para vistas chicas */
